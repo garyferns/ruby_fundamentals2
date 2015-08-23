@@ -1,22 +1,25 @@
 grocery_list = ["carrots", "toilet paper", "apples", "salmon", "rice"]
-alpha_list = grocery_list.sort.map { |e| "* " + e}
+
 
 
 def list_items(list)
 
+alpha_list = list.sort.map { |e| "* " + e}
 count = 0
 
-  while count < list.length
+  while count < alpha_list.length
 
-    puts "#{list[count]}"
+    puts "#{alpha_list[count]}"
     count += 1
   end
 
 puts "
 There are #{list.length} item(s) on the grocery list."
+puts "The second item on the list is:
+#{alpha_list[1]}"
 end
 
-list_items(alpha_list)
+list_items(grocery_list)
 have_bananas = grocery_list.include?("bananas")
 
 if have_bananas == true
@@ -26,5 +29,13 @@ if have_bananas == true
   puts "You need to pick up bananas."
 end
 
-puts "The second item on the list is:
-#{alpha_list[1]}"
+
+
+puts "There is no salmon in the store! Better remove it from the list."
+
+grocery_list.delete("salmon")
+list_items(grocery_list)
+
+
+
+
