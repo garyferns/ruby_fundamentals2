@@ -4,13 +4,15 @@ students = {
 
   :cohort1 => 34,
   :cohort2 => 42,
-  :cohort3 => 22
+  :cohort3 => 22,
+  :cohort4 => 43
 }
 
 def keys(hash)
 
   hash.each do |key, value|
-  puts"#{key}: #{value}"
+  value *= 1.05
+  puts"#{key}: #{value.ceil}"
   end
 end
 
