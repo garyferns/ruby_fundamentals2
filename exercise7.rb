@@ -11,9 +11,15 @@ def keys(hash)
 
   hash.each do |key, value|
   value *= 1.05
-  puts"#{key}: #{value.ceil}"
+  students = value.ceil
+
+  puts"#{key}: #{students}"
   end
+
 end
 
-
 keys(students)
+
+
+puts" The total number of students is #{students.values.reduce(:+)}"
+
